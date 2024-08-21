@@ -1,7 +1,7 @@
 //Making count by divConta
 
 //Buscando as Div's pelo Id:
-var conta = document.getElementById('conta');
+const conta = document.getElementById('contaInput');
 
 // Adiciona números e operadores chamando a function e dando valores aos parâmetros.
 function number0(){
@@ -51,34 +51,16 @@ function subtracao(){
     addNumber('-')
 }
 
-let list = []; // Criando uma array vazia pra depois iterar e achar o operador.
+
 let exp = ''; // Criando variável para adicionar uma expressão em string com os mesmo valores da array. 
 
 function addNumber(valor){
     conta.innerHTML += valor; // Insere o valor digitado na div
-    exp += valor; // Insere o valor na variável expressão
-    list.push(valor) // Insere valores na lista   
+    exp += valor; // Insere o valor na variável expressão  
 } 
 
 function envioConta(){
-    for (let i = 0; i < list.length; i++){ // Itera sobre a array para encontrar o operador digitado.        
-        switch (list[i]) {
-            case '/':
-                exp = eval(exp); // Deixa de ser string com eval()
-                break;
-            case '*':
-                exp = eval(exp);
-                break;
-            case '+':
-                exp = eval(exp);
-                break;
-            case '-':
-                exp = eval(exp);
-                break;
-            default:
-                break;
-        }
-    }
+    exp = eval(exp);
     conta.innerHTML = exp; // Insere novo valor da expressão já realizada.
 }
 
@@ -87,7 +69,8 @@ const restart = () => { // Chama a função onclick onde atualiza a página
 }
 
 const zeraConta = () => {
-    location.reload();
+    exp = '';
+    conta.innerHTML = exp;
 }
 
 const porcentagem = () => {
