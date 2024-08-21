@@ -1,3 +1,5 @@
+//Making count by divConta
+
 //Buscando as Div's pelo Id:
 var conta = document.getElementById('conta');
 
@@ -55,8 +57,7 @@ let exp = ''; // Criando variável para adicionar uma expressão em string com o
 function addNumber(valor){
     conta.innerHTML += valor; // Insere o valor digitado na div
     exp += valor; // Insere o valor na variável expressão
-    list.push(valor) // Insere valores na lista 
-    
+    list.push(valor) // Insere valores na lista   
 } 
 
 function envioConta(){

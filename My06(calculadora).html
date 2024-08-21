@@ -7,9 +7,15 @@
     <title>Calculadora</title>
 </head>
 <body>
+    <select id="dark" id="darkModeSelect" size="2">
+    <option value="darkMode" onclick="dark()">Dark Mode</option>
+    <option value="lightMode" onclick="light()">Light Mode</option>
+    </select>
+
+
     <p><strong>Calculadora Básica</strong></p>
     <div id="principal">
-        <div id="conta"></div>
+        <input type="text" id="conta"></input>
     <section>
         <button id="porcentagem" onclick="porcentagem()"><strong>%</strong></button> 
         <button id="zeraConta" onclick="zeraConta()"><strong>CE</strong></button>
@@ -42,6 +48,7 @@
     </div>
 
     <script src="My06calculadora.js"></script>
+    <script src="darkModeOption.js"></script>
 
 
 
